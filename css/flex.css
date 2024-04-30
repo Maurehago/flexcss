@@ -261,6 +261,7 @@ table {
   border-spacing:0;
   width:100%;
   display:table;
+  padding-bottom: 8px;
 }
 th {
   text-align: inherit;
@@ -271,8 +272,8 @@ thead,tbody,tfoot,tr,td,th {
   border-style: solid;
   border-width: 0;
 }
-thead{border-bottom: 2px solid #c4c4c4;}
-th,td{border-bottom: 1px solid #ddd;padding: 0.5rem;}
+/*thead{border-bottom: 2px solid #c4c4c4;}
+th,td{border-bottom: 1px solid #ddd;padding: 0.5rem;}*/
 
 [data-all] tr:nth-child(odd){
   background-color:#fff
@@ -422,7 +423,7 @@ progress {vertical-align: baseline;}
 [pa-t-16], .pa-t-16 {padding-top: 16px;}
 [pa-t-32], .pa-t-32 {padding-top: 32px;}
 [pa-b], .pa-b {padding-bottom: 8px;}
-[pa-h], .pa-h {padding-left: 8px; padding-bottom: 8px;}
+[pa-h],.pa-h,th,td {padding-left: 8px; padding-right: 8px;}
 [pa-v], .pa-v {padding-top: 8px; padding-bottom: 8px;}
 [pa-v-16], .pa-v-16 {padding-top: 16px; padding-bottom: 16px;}
 [pa-v-32], .pa-v-32 {padding-top: 32px; padding-bottom: 32px;}

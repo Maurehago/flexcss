@@ -35,10 +35,30 @@
 
 <body>
   <f-row w-max><h1>Spalten</h1></f-row>
-  <f-row color-p w-max style="height: 300px;">
-    <f-item color-s w-25>col-1</f-item>
+  <f-row w-max color-p style="min-height: 300px;">
+    <f-item color-s w-50>col-1
+      <h1>Formular</h1>
+      <table  ma-b>
+        <tr>
+          <th>PLZ:</th>
+          <td><input ma-r type="text"/></td>
+        </tr>
+        <tr>
+          <th>Ort:</th>
+          <td><input type="text"/></td>
+        </tr>
+        <tr>
+          <th>Fließtext:</th>
+          <td><textarea rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <th>Test Test Test Test:</th><td><input type="text"/></td>
+        </tr>
+      </table>
+    
+    </f-item>
     <f-item color-s2 w-fit pos-rel><pos-m>Mitte</pos-m>col-2</f-item>
-    <f-item color-p2 w-fit>col-3</f-item>
+    <f-item color-p2 w-25><h2>Spalte 3</h2><p>col-3</p></f-item>
   </f-row>
   <form w-max ma-t-32>
     <h1>Formular</h1>
