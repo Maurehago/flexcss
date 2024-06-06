@@ -512,6 +512,8 @@ f-col::before,f-col::after
 
 
 /* Zelle */
+/* wird verewndet wenn mehrere HTML TAG-Elemente in einem Block zusammengefasst werden 
+   sonnst gilt jedes TAG-Element als Item */
 f-item,[f-item],.f-item{
   display: block;
   flex: 0 1 auto;
@@ -524,14 +526,14 @@ f-item,[f-item],.f-item{
 }
 
 /* Ausrichtung der Inhalte in einer Flex Zeile */
-[i-left],.i-left{justify-content: flex-start;}
-[i-right],.i-right{justify-content: flex-end;}
-[i-center],.i-center{justify-content: center;} /* horizontal */
-[i-stretch],.i-stretch{align-items: stretch;} /* vertical */
-[i-top],.i-top{align-items: flex-start;}
-[i-bottom],.i-bottom{align-items: flex-end;}
-[i-base],.i-base{align-items: baseline;}
+[i-left],.i-left{justify-content: flex-start;} /* |<-- */
+[i-right],.i-right{justify-content: flex-end;} /* -->| */
+[i-center],.i-center{justify-content: center;} /* horizontal --> <-- */
+[i-stretch],.i-stretch{align-items: stretch;} /* vertical ganze Höhe */
+[i-top],.i-top{align-items: flex-start;}  /* oben */
+[i-bottom],.i-bottom{align-items: flex-end;}  /* unten */
 [i-middle],.i-middle{align-items: center;} /* vertical */
+[i-base],.i-base{align-items: baseline;} /* auf 1. Textlinie ausgerichtet */
 
 
 
@@ -566,6 +568,22 @@ f-item,[f-item],.f-item{
 [w-11],.w-11{min-width: 91.66666667%;}
 [w-12],.w-12,[w-100],.w-100{min-width: 100%;}
 
+/* Höhen */
+[h-1],.h-1{min-height: 8.33333333%;}
+[h-2],.h-2{min-height: 16.66666667%;}
+[h-20],.h-20{min-height: 20%;}
+[h-3],.h-3,[h-25],.h-25{min-height: 25%;}
+[h-4],.h-4,[h-33],.h-33{min-height: 33.33333333%;}
+[h-5],.h-5{max-height: 41.66666667%;}
+[h-6],.h-6,[h-50],.h-50{min-height: 50%;}
+[h-7],.h-7{min-height: 58.33333333%;}
+[h-60],.h-60{min-height: 60%;}
+[h-8],.h-8,[h-66],.h-66{min-height: 66.66666667%; }
+[h-9],.h-9,[h-75],.h-75{min-height: 75%;}
+[h-80],.h-80{min-height: 80%;}
+[h-10],.h-10{min-height: 83.33333333%;}
+[h-11],.h-11{min-height: 91.66666667%;}
+[h-12],.h-12,[h-100],.h-100{min-height: 100%;}
 
 
 /* ============================ */
