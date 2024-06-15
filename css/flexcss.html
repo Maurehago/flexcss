@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  -->
+  
+  <!--
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  -->
+  
+  <!--
+  <link rel="stylesheet" href="css/normalize.css">
+  -->
+  <link rel="stylesheet" href="flex.css">
+  <link rel="stylesheet" href="flex-colors.css">
+  
+  <!--
+  <link rel="manifest" href="site.webmanifest">
+  -->
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <f-row w-max><h1>Spalten</h1></f-row>
+  <f-row w-max color-p style="min-height: 300px;">
+    <f-item color-s w-50>col-1
+      <h1>Formular</h1>
+      <table  ma-b>
+        <tr>
+          <th>PLZ:</th>
+          <td><input ma-r type="text"/></td>
+        </tr>
+        <tr>
+          <th>Ort:</th>
+          <td><input type="text"/></td>
+        </tr>
+        <tr>
+          <th>Fließtext:</th>
+          <td><textarea rows="5"></textarea></td>
+        </tr>
+        <tr>
+          <th>Test Test Test Test:</th><td><input type="text"/></td>
+        </tr>
+      </table>
+    
+    </f-item>
+    <f-item color-s2 w-fit pos-rel><pos-m>Mitte</pos-m>col-2</f-item>
+    <f-item color-p2 w-25><h2>Spalte 3</h2><p>col-3</p></f-item>
+  </f-row>
+  <form w-max ma-t-32>
+    <h1>Formular</h1>
+    <f-row pa-h>
+      <label w-20>PLZ:</label>
+      <input ma-r type="text"/>
+      <label>Ort:</label>
+      <input type="text"/>
+    </f-row>
+    <f-row pa-h>
+      <label w-20>Fließtext:</label>
+      <textarea rows="5"></textarea>
+    </f-row>
+    <f-row pa-h>
+      <label w-20>Test Test Test Test:</label><input type="text"/>
+    </f-row>
+  </form>
+
+</body>
+
+</html>
