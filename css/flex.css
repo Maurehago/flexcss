@@ -597,7 +597,7 @@ f-row > *, f-item,[f-item],.f-item{
 /* Breiten fix */
 [w-fit],.w-fit{flex: 1 1 auto; min-width: 5%;}
 
-[w-max],.w-max{max-width: 1080px;margin-right: auto;margin-left: auto;}
+[w-max],.w-max{max-width: 1080px;}
 [w-xxl],.w-xxl{min-width: 1400px;}
 [w-xl],.w-xl{min-width: 1200px; max-width: 1399px;}
 [w-l],.w-l{width: 992px; max-width: 1199px;}
