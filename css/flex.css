@@ -541,7 +541,6 @@ pos-sticky,[pos-sticky],.pos-sticky{position: sticky;z-index: 2;}
 f-row,[f-row],.f-row{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 /* Spalten - Container und Formular */
@@ -600,6 +599,7 @@ f-row > *, f-item,[f-item],.f-item{
 
 /* Breiten fix */
 [w-fit],.w-fit{flex: 1 1 auto; min-width: 5%;}
+[w-fix],.w-fix{flex: 0 0 auto;}
 
 [w-max],.w-max{max-width: 1080px;}
 [w-xxl],.w-xxl{min-width: 1400px;}
@@ -749,7 +749,7 @@ modal-co,[modal-co],.modal-co {
 
   f-row >*,[f-row]>*,.f-row>*, f-item,[f-item],.f-item
   ,[w-fit],.w-fit {
-    flex: 1 1 40%;
+    flex: 1 1 auto;
   }  
 }
 
