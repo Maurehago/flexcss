@@ -805,7 +805,6 @@ down-co,[down-co],.down-co {
 /* Modal */
 modal-back,[modal-back],.modal-back {
   z-index: 99;
-  display: none;
   padding-top: 100px;
   position: fixed;
   left: 0;
