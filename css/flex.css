@@ -822,6 +822,23 @@ down-co,[down-co],.down-co {
 
 
 /* Modal */
+body:has(modal-back:not(.hidden)) {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body:has([modal-back]:not(.hidden)) {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+body:has(.modal-back:not(.hidden)) {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
 modal-back,[modal-back],.modal-back {
   z-index: 99;
   padding-top: 100px;
@@ -834,7 +851,7 @@ modal-back,[modal-back],.modal-back {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4)
 }
-[modal-co],.modal-co {
+modal-co,[modal-co],.modal-co {
   margin: auto;
   background-color: #fff;
   position: relative;
