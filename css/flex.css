@@ -2283,7 +2283,7 @@ modal-co,
     display: none !important;
   }
 
-  h1 {
+  h1,[break-before],.break-before {
     break-before: page;
   }
 
