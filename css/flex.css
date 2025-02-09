@@ -2338,7 +2338,7 @@ modal-co,
   f-item,
   [f-item],
   .f-item {
-    width: 100% !important;
+    /*width: 100% !important; */
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -2390,12 +2390,6 @@ modal-co,
   [hide-lt-xxl],
   .hide-lt-xxl {
     display: none !important
-  }
-
-  f-row,
-  [f-row],
-  .f-row {
-    flex-wrap: wrap;
   }
 
   /* f-item,[f-item],.f-item {
