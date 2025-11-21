@@ -163,7 +163,7 @@ h6,.h6 {
 /* Absätze */
 p {
   margin-top: 2px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2px;
   padding: 4px 8px 0 8px;
   width: 100%;
   white-space: normal;
@@ -343,7 +343,7 @@ nav input[type="checkbox"]:checked+label+ul {
   display: block;
 }
 
-nav label {
+nav label,label[for] {
   cursor: pointer;
 }
 
@@ -479,9 +479,14 @@ th,td{border-bottom: 1px solid #ddd;padding: 0.5rem;}*/
 /* Formular */
 label {
   display: inline-block;
-  /*padding-top: 0.5em;*/
-  padding-right: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 4px 0 0 0;
 }
+label + input {padding-right: 8px;}
+label + textarea {padding-right: 8px;}
+input + label {padding-left: 8px;}
+
 
 button {
   border-radius: 0;
@@ -519,7 +524,6 @@ textarea,[type=text],[type=password],[type=email],[type=file],[type=image],[type
   height: 24px;
   position: relative;
   top: 6px;
-  margin-right: 8px;
 }
 
 /*transform: translate(0%,20%)}*/
@@ -1223,7 +1227,7 @@ modal-co,[modal-co],.modal-co {
     flex-wrap: unset;
   }
 
-  f-row,[f-row],.f-row,f-row,f-row>*,f-item,[f-item],.f-item {
+  f-row,[f-row],.f-row,f-row,f-item,[f-item],.f-item { /* f-row>* */
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
