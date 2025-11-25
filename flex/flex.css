@@ -447,7 +447,7 @@ th {
 }
 
 td {
-  padding: 8px;
+  padding: 2px 8px;
 }
 
 table[table-border] thead,table[table-border] tbody,table[table-border] tfoot,table[table-border] tr,table[table-border] td,table[table-border] th,table.table-border thead,table.table-border tbody,table.table-border tfoot,table.table-border tr,table.table-border td,table.table-border th {
