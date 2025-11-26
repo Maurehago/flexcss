@@ -221,15 +221,15 @@ blockquote {
 
 
 /* Text Formatierung */
-b,strong {
+b,strong,[text-bold],.text-small {
   font-weight: bolder;
 }
 
-small,.small {
+small,.small,[text-small],.text-small {
   font-size: 0.875em;
 }
 
-mark,.mark {
+mark,.mark,[text-mark],.text-mark {
   padding: 0.1875em;
   background-color: #fff3cd;
   color: #000;
@@ -251,7 +251,7 @@ mark,.mark {
   vertical-align: top;
 }
 
-[text-m],.text-m,[text-vc],.text-vc {
+[text-m],.text-m,[text-v-c],.text-v-c,[text-vc],.text-vc {
   vertical-align: middle;
 }
 
@@ -274,6 +274,10 @@ mark,.mark {
   border-radius: 50%
 }
 
+/* Cursor Pointer */
+a:hover,cu-pointer,nav label,label[for],[role=button],summary {
+  cursor: pointer;
+}
 
 /* Link */
 a {
@@ -281,17 +285,60 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  cursor: pointer;
-  /*text-decoration: underline*/
-  ;
-}
 
 a:not([href]):not([class]),a:not([href]):not([class]):hover,[a-non],.a-non {
   color: inherit;
   text-decoration: none;
 }
 
+/* Summary */
+summary {
+  font-size: 1.2em;
+}
+
+
+/* Listen / details>summery Icons */
+/* › ⏵ ▶ ▷ ▸ ▹ ➔ ➜*/
+/* ⏷ ▼ ▼ ▽ ▾ ▿ ⛛ ⯆ ▼*/
+/* ⏴ ◀*/
+/* ⏶ */
+/* ☰ ︙ */
+/* 🗙 */
+
+.icon-r,[icon-r] {list-style-type: '⏵';padding-top: 4px;}
+icon-r::before,.icon-r::before,[icon-r]::before {content: '⏵';}
+.icon-r-l,[icon-r-l] {list-style-type: '▶';padding-top: 4px;}
+icon-r-l::before,.icon-r-l::before,[icon-r-l]::before {content: '▶';}
+
+.icon-d,[icon-d] {list-style-type: '▼';padding-top: 4px;}
+icon-d::before,.icon-d::before,[icon-d]::before {content: '▼';}
+
+.icon-l,[icon-l] {list-style-type: '⏴';padding-top: 4px;}
+icon-l::before,.icon-l::before,[icon-l]::before {content: '⏴';}
+.icon-l-l,[icon-l-l] {list-style-type: '◀';padding-top: 4px;}
+icon-l-l::before,.icon-l-l::before,[icon-l-l]::before {content: '◀';}
+
+.icon-u,[icon-u] {list-style-type: '⏶';padding-top: 4px;}
+icon-u::before,.icon-u::before,[icon-u]::before {content: '⏶';}
+
+.icon-menu,[icon-menu] {list-style-type: '☰';padding-top: 4px;}
+icon-menu::before,.icon-menu::before,[icon-menu]::before {content: '☰';}
+.icon-menu2,[icon-menu2] {list-style-type: '︙';padding-top: 4px;}
+icon-menu2::before,.icon-menu2::before,[icon-menu2]::before {content: '︙';}
+.icon-close,[icon-close] {list-style-type: '🗙';padding-top: 4px;}
+icon-close::before,.icon-close::before,[icon-close]::before {content: '🗙';}
+
+
+
+details[open] > summary[icon-r],details[open] > summary.icon-r
+, details[open] > summary[icon-menu2],details[open] > summary.icon-menu2 {
+    list-style-type: '🗙';
+}
+
+details[open] > summary[icon-menu],details[open] > summary.icon-menu
+, details[open] > summary[icon-r-l],details[open] > summary.icon-r-l {
+    list-style-type: '▼';
+}
 
 /* Listen */
 ol,ul,dl {
@@ -341,10 +388,6 @@ nav input[type="checkbox"]:not(:checked)+label+ul {
 
 nav input[type="checkbox"]:checked+label+ul {
   display: block;
-}
-
-nav label,label[for] {
-  cursor: pointer;
 }
 
 nav a {
@@ -488,22 +531,28 @@ label + textarea {padding-right: 8px;}
 input + label {padding-left: 8px;}
 
 
-button {
+button,[as-button],.as-button,summary {
   border-radius: 0;
   border: none;
-  display: inline-block;
   padding: 4px 8px 8px 8px;
   vertical-align: middle;
-  text-decoration: none;
-  text-align: center;
-  /* white-space: nowrap; */
 }
+
+button,[as-button],.as-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:not([f-row],.f-row,[text-l],.text-l),[as-button]:not([f-row],.f-row,[text-l],.text-l),.as-button:not([f-row],.f-row,[text-l],.text-l) {
+  text-align: center;
+}
+
 
 button:focus:not(:focus-visible) {
   outline: 0;
 }
 
-input,button,select,optgroup,textarea {
+input,button,[as-button],.as-button,select,optgroup,textarea {
   margin: 2px 0 0 0;
   font-family: inherit;
   font-size: inherit;
@@ -535,10 +584,6 @@ button:hover,a:hover {
 
 button,select {
   text-transform: none;
-}
-
-[role=button] {
-  cursor: pointer;
 }
 
 select {
@@ -625,11 +670,6 @@ output {
 
 iframe {
   border: 0;
-}
-
-summary {
-  display: list-item;
-  cursor: pointer;
 }
 
 progress {
@@ -1222,7 +1262,7 @@ modal-co,[modal-co],.modal-co {
     display: none !important
   }
 
-  f-row:not([no-wrap]),[f-row]:not([no-wrap]),.f-row:not([no-wrap]) {
+  f-row:not([no-wrap],[f-wrap]),[f-row]:not([no-wrap],[f-wrap]),.f-row:not([no-wrap],[f-wrap]) {
     flex-direction: column;
     flex-wrap: unset;
   }
