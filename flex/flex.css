@@ -294,51 +294,57 @@ a:not([href]):not([class]),a:not([href]):not([class]):hover,[a-non],.a-non {
 /* Summary */
 summary {
   font-size: 1.2em;
+  list-style-type: '⯈ ';
 }
-
+details[open] > summary {
+  list-style-type: '⯆ ';
+} 
+summary[f-row]::before,summary.f-row::before {
+  padding: 0.25em 0 0 0;
+  content: '⯈';
+}
+details[open] summary[f-row]::before,summary.f-row::before {
+  content: '⯆';
+}
 
 /* Listen / details>summery Icons */
-/* › ⏵ ▶ ▷ ▸ ▹ ➔ ➜*/
-/* ⏷ ▼ ▼ ▽ ▾ ▿ ⛛ ⯆ ▼*/
-/* ⏴ ◀*/
-/* ⏶ */
-/* ☰ ︙ */
-/* 🗙 */
+/* ⯅ ⯆ ⯇ ⯈ */
+/* ›  ▶ ▷ ▸ ▹ ➔ ➜*/
+/* ▽ ▾ ▿ ⛛ */
+/* ☰ ︙ ✖ ● ✔ ⚪ 🔘 ⬤ ⚫ ⏺ ⬤ ⏹ */
+/* ☐ ▣ ☒ ☑ 🗹 🗷 ⚙ ⛯ ⛭ ★ ⌕ ⊘ ▢ */
 
-.icon-r,[icon-r] {list-style-type: '⏵';padding-top: 4px;}
-icon-r::before,.icon-r::before,[icon-r]::before {content: '⏵';}
-.icon-r-l,[icon-r-l] {list-style-type: '▶';padding-top: 4px;}
+icon-circle,.icon-circle,[icon-circle] {list-style-type: '⬤';padding-top: 0.25em;}
+icon-circle::before,.icon-circle::before,[icon-circle]::before {content: '⬤';}
+
+icon-r,.icon-r,[icon-r] {list-style-type: '⯈';padding-top: 0.25em;}
+icon-r::before,.icon-r::before,[icon-r]::before {content: '⯈';}
+icon-r-l,.icon-r-l,[icon-r-l] {list-style-type: '▶';padding-top: 0.25em;}
 icon-r-l::before,.icon-r-l::before,[icon-r-l]::before {content: '▶';}
 
-.icon-d,[icon-d] {list-style-type: '▼';padding-top: 4px;}
-icon-d::before,.icon-d::before,[icon-d]::before {content: '▼';}
+icon-d,.icon-d,[icon-d] {list-style-type: '⯆';padding-top: 0.25em;}
+icon-d::before,.icon-d::before,[icon-d]::before {content: '⯆';}
 
-.icon-l,[icon-l] {list-style-type: '⏴';padding-top: 4px;}
-icon-l::before,.icon-l::before,[icon-l]::before {content: '⏴';}
-.icon-l-l,[icon-l-l] {list-style-type: '◀';padding-top: 4px;}
+icon-l,.icon-l,[icon-l] {list-style-type: '⯇';padding-top: 0.25em;}
+icon-l::before,.icon-l::before,[icon-l]::before {content: '⯇';}
+icon-l-l,.icon-l-l,[icon-l-l] {list-style-type: '◀';padding-top: 0.25em;}
 icon-l-l::before,.icon-l-l::before,[icon-l-l]::before {content: '◀';}
 
-.icon-u,[icon-u] {list-style-type: '⏶';padding-top: 4px;}
-icon-u::before,.icon-u::before,[icon-u]::before {content: '⏶';}
+icon-u,.icon-u,[icon-u] {list-style-type: '⯅';padding-top: 0.25em;}
+icon-u::before,.icon-u::before,[icon-u]::before {content: '⯅';}
 
-.icon-menu,[icon-menu] {list-style-type: '☰';padding-top: 4px;}
+icon-menu,.icon-menu,[icon-menu] {list-style-type: '☰';padding-top: 0.25em;}
 icon-menu::before,.icon-menu::before,[icon-menu]::before {content: '☰';}
-.icon-menu2,[icon-menu2] {list-style-type: '︙';padding-top: 4px;}
+icon-menu2,.icon-menu2,[icon-menu2] {list-style-type: '︙';padding-top: 0.25em;}
 icon-menu2::before,.icon-menu2::before,[icon-menu2]::before {content: '︙';}
-.icon-close,[icon-close] {list-style-type: '🗙';padding-top: 4px;}
-icon-close::before,.icon-close::before,[icon-close]::before {content: '🗙';}
-
-
-
-details[open] > summary[icon-r],details[open] > summary.icon-r
-, details[open] > summary[icon-menu2],details[open] > summary.icon-menu2 {
-    list-style-type: '🗙';
-}
+icon-close,.icon-close,[icon-close] {list-style-type: '✖';padding-top: 0.25em;}
+icon-close::before,.icon-close::before,[icon-close]::before {content: '✖';}
 
 details[open] > summary[icon-menu],details[open] > summary.icon-menu
-, details[open] > summary[icon-r-l],details[open] > summary.icon-r-l {
-    list-style-type: '▼';
+,details[open] > summary[icon-menu2],details[open] > summary.icon-menu2 {
+    list-style-type: '✖';
 }
+
 
 /* Listen */
 ol,ul,dl {
