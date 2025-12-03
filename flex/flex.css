@@ -299,12 +299,12 @@ summary {
 details[open] > summary {
   list-style-type: '⯆ ';
 } 
-summary[f-row]::before,summary.f-row::before {
+summary[f-row]::before,summary.f-row::before, summary + f-row::before, summary + [f-row]::before, summary + .f-row::before {
   padding: 0.25em 0 0 0;
-  content: '⯈';
+  content: '⯈ ';
 }
-details[open] summary[f-row]::before,summary.f-row::before {
-  content: '⯆';
+details[open] summary[f-row]::before,details[open] summary.f-row::before,details[open]  summary + f-row::before,details[open]  summary + [f-row]::before,details[open]  summary + .f-row::before {
+  content: '⯆ ';
 }
 
 /* Listen / details>summery Icons */
@@ -314,31 +314,21 @@ details[open] summary[f-row]::before,summary.f-row::before {
 /* ☰ ︙ ✖ ● ✔ ⚪ 🔘 ⬤ ⚫ ⏺ ⬤ ⏹ */
 /* ☐ ▣ ☒ ☑ 🗹 🗷 ⚙ ⛯ ⛭ ★ ⌕ ⊘ ▢ */
 
-icon-circle,.icon-circle,[icon-circle] {list-style-type: '⬤';padding-top: 0.25em;}
-icon-circle::before,.icon-circle::before,[icon-circle]::before {content: '⬤';}
+.icon-circle::before,[icon-circle]::before {content: '⬤ ';padding-top: 0.25em;}
 
-icon-r,.icon-r,[icon-r] {list-style-type: '⯈';padding-top: 0.25em;}
-icon-r::before,.icon-r::before,[icon-r]::before {content: '⯈';}
-icon-r-l,.icon-r-l,[icon-r-l] {list-style-type: '▶';padding-top: 0.25em;}
-icon-r-l::before,.icon-r-l::before,[icon-r-l]::before {content: '▶';}
+.icon-r::before,[icon-r]::before {content: '⯈ ';padding-top: 0.25em;}
+.icon-r-l::before,[icon-r-l]::before {content: '▶ ';padding-top: 0.25em;}
 
-icon-d,.icon-d,[icon-d] {list-style-type: '⯆';padding-top: 0.25em;}
-icon-d::before,.icon-d::before,[icon-d]::before {content: '⯆';}
+.icon-d::before,[icon-d]::before {content: '⯆ ';padding-top: 0.25em;}
 
-icon-l,.icon-l,[icon-l] {list-style-type: '⯇';padding-top: 0.25em;}
-icon-l::before,.icon-l::before,[icon-l]::before {content: '⯇';}
-icon-l-l,.icon-l-l,[icon-l-l] {list-style-type: '◀';padding-top: 0.25em;}
-icon-l-l::before,.icon-l-l::before,[icon-l-l]::before {content: '◀';}
+.icon-l::before,[icon-l]::before {content: '⯇ ';padding-top: 0.25em;}
+.icon-l-l::before,[icon-l-l]::before {content: '◀ ';padding-top: 0.25em;}
 
-icon-u,.icon-u,[icon-u] {list-style-type: '⯅';padding-top: 0.25em;}
-icon-u::before,.icon-u::before,[icon-u]::before {content: '⯅';}
+.icon-u::before,[icon-u]::before {content: '⯅ ';padding-top: 0.25em;}
 
-icon-menu,.icon-menu,[icon-menu] {list-style-type: '☰';padding-top: 0.25em;}
-icon-menu::before,.icon-menu::before,[icon-menu]::before {content: '☰';}
-icon-menu2,.icon-menu2,[icon-menu2] {list-style-type: '︙';padding-top: 0.25em;}
-icon-menu2::before,.icon-menu2::before,[icon-menu2]::before {content: '︙';}
-icon-close,.icon-close,[icon-close] {list-style-type: '✖';padding-top: 0.25em;}
-icon-close::before,.icon-close::before,[icon-close]::before {content: '✖';}
+.icon-menu::before,[icon-menu]::before {content: '☰ ';padding-top: 0.25em;}
+.icon-menu2::before,[icon-menu2]::before {content: '︙ ';padding-top: 0.25em;}
+.icon-close::before,[icon-close]::before {content: '✖ ';padding-top: 0.25em;}
 
 details[open] > summary[icon-menu],details[open] > summary.icon-menu
 ,details[open] > summary[icon-menu2],details[open] > summary.icon-menu2 {
