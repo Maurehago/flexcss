@@ -294,18 +294,25 @@ a:not([href]):not([class]),a:not([href]):not([class]):hover,[a-non],.a-non {
 /* Summary */
 summary {
   font-size: 1.2em;
-  list-style-type: '⯈ ';
+  list-style: none;
+  background-repeat: no-repeat;
+  background-position: left;
 }
-details[open] > summary {
-  list-style-type: '⯆ ';
+details > summary {
+  background-image: url(img/arrow_right.svg);
+  padding-left: 1.2em;
 } 
-summary[f-row]::before,summary.f-row::before, summary + f-row::before, summary + [f-row]::before, summary + .f-row::before {
+details[open] > summary {
+  padding-left: 1.2em;
+  background-image: url(img/arrow_down.svg);
+} 
+/*summary[f-row]::before,summary.f-row::before, summary + f-row::before, summary + [f-row]::before, summary + .f-row::before {
   padding: 0.25em 0 0 0;
   content: '⯈ ';
 }
 details[open] summary[f-row]::before,details[open] summary.f-row::before,details[open]  summary + f-row::before,details[open]  summary + [f-row]::before,details[open]  summary + .f-row::before {
   content: '⯆ ';
-}
+}*/
 
 /* Listen / details>summery Icons */
 /* ⯅ ⯆ ⯇ ⯈ */
@@ -369,6 +376,12 @@ dd {
 nav ol,nav ul {
   list-style-type: none;
   padding-left: 8px;
+}
+
+nav:empty,nav:has(:only-child:empty), 
+[hide-empty]:empty,[hide-empty]:has(:only-child:empty),
+.hide-empty:empty,.hide-empty:has(:only-child:empty){
+  display: none;
 }
 
 .toggler {
